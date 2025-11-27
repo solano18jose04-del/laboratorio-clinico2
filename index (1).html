@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registro de pacientes para la entrega de resultados del Laboratorio Clínico">
+    <title>Laboratorio Clínico — Registro</title>
+    <link rel="stylesheet" href="styles (1).css">
+</head>
+<body>
+    <main class="container" role="main">
+        <h1>Laboratorio Clínico</h1>
+        <h2>Registro para entrega de resultados</h2>
+
+        <form id="formularioPaciente" action="resultados.html" method="GET" aria-labelledby="form-title">
+            <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required autocomplete="name">
+            </div>
+            <div class="form-group">
+                <label for="cedula">Cédula</label>
+                <input type="text" id="cedula" name="cedula" required inputmode="numeric" pattern="[0-9]+" title="Sólo números">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" required inputmode="tel" pattern="[0-9\-\s]+" title="Números, espacios y guiones permitidos">
+            </div>
+            <div class="form-group">
+                <label for="tipoExamen">Tipo de examen</label>
+                <select name="tipoExamen" id="tipoExamen" required>
+                    <option value="">Seleccione..</option>
+                    <option value="Hemograma">Hemograma</option>
+                    <option value="Clucosa">Glucosa</option>
+                    <option value="Colesterol">Colesterol</option>
+                    <option value="Orina">Orina</option>
+                    <option value="Covid">Prueba covid</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fechaExamen">Fecha del examen</label>
+                <input type="date" id="fechaExamen" name="fechaExamen" required>
+            </div>
+            <button type="submit">Enviar información</button>
+        </form>
+    </div>
+    <script src="./script.js" defer></script>
+</body>
+</html>
